@@ -1,1 +1,1 @@
-web: node /timestamp/server.js
+web: node ./timestamp/server.js
