@@ -5,7 +5,7 @@ var path = require('path');
 
 
 app.get('/', function(request, response) {
-    response.sendFile(path.join(__dirname + '/../client/index.html'));
+    response.sendFile(path.join(__dirname + '/client/index.html'));
 });
 app.get('/:timestamp', function(request, response) {
     var timestamp = request.params.timestamp;
