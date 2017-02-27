@@ -3,10 +3,12 @@ var app = express();
 var PORT = process.env.PORT || 8080;
 var path = require('path');
 
+app.use(express.static('client'));
 
 app.get('/', function(request, response) {
     response.sendFile(path.join(__dirname + '/client/index.html'));
 });
+
 app.get('/:timestamp', function(request, response) {
     var timestamp = request.params.timestamp;
     response.json(getTimestampJSON(timestamp));
